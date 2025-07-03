@@ -1,0 +1,2809 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/*FONTS*/
+
+@font-face {
+   font-family: re-zero;
+   src: url(./re-zero-font-light.ttf);
+}
+
+@font-face {
+  font-family: re-zero;
+  src: url(./re-zero-font-bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+   font-family: bloody;
+   src: url(./bloody-font.ttf);
+}
+
+@font-face {
+   font-family: bangers;
+   src: url(./bangers.ttf);
+}
+
+
+
+.re-zero-font {
+    font-family: re-zero;
+}
+
+h1, p{
+    font-family: re-zero;
+}
+
+.bloody-font {
+    font-family: bloody;
+}
+
+/* BANNER */ 
+
+
+.video-section {
+   display: grid;
+   position: relative; 
+   grid-template-columns: 52em 1em; 
+   gap: 1em; 
+} 
+
+
+.banner-video video{ 
+   display: flex; 
+   position: relative; 
+   top: 0; 
+   left: 0; 
+   z-index: 0; 
+   min-width:100vw; 
+   min-height: 100vh; 
+   -webkit-filter: brightness(80%); 
+   filter:brightness(80%); 
+}
+
+
+.banner-video image{ 
+   display: flex; 
+   position: relative; 
+   top: 0; 
+   left: 0; 
+   z-index: 0; 
+   min-width:100vw; 
+   min-height: 100vh; 
+   -webkit-filter: brightness(80%); 
+   filter:brightness(80%);
+}
+
+
+/*OFFER*/ 
+
+
+.offer{
+   font-size: 1em; 
+   z-index: 4; 
+   background-color: #00000052; 
+   color: #ffffff; 
+   padding: 2em; 
+   top: 2em;
+   right: 2em;
+   position: fixed; 
+   width: 8em; 
+} 
+
+   /*BUTTON ANCHOR SHIT*/
+
+.offer a { 
+   margin-top: 2em; 
+   display: block; 
+   background-color: #420a0a; 
+   color: white; 
+   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+   letter-spacing: 0.2em; 
+   padding: 0.5em; 
+   text-align: center; 
+   text-decoration: none; 
+} 
+
+
+
+
+/*backdrop*/
+
+.backdrop {
+    z-index: -100;
+    min-height: 1640px;
+    min-width: 100vw;
+}
+
+
+/*SIN-ANIMATION*/
+
+.sin-images {
+    position: absolute;
+    display: flex;
+}
+
+.sin-images img {
+    position: absolute;
+    translate: -50%;
+    top :16px;
+    left : 50vw;
+    min-width: 64px;
+    max-width: 128px;
+    animation: image-bounce 1s ease-in-out infinite;
+    z-index: 100;
+    pointer-events: none;
+    
+}
+
+/*ANIMATIONS ARE IN THE BOTTOM*/
+
+/*SIN-BACKGROUNDS*/
+
+.envy {
+    background: #98dbf5;
+    background: linear-gradient(180deg, #98dbf5 0%, #7affdc 20%, #a6ffa6 80%, #ffc061 100%);
+}
+
+.envy-backcolor {
+    display: flex;
+    position: relative;
+    top: 10px;
+    left: 50vw;
+    translate: -50%;
+    width: 140px; /* CHANGE THESE VALUES TO CHANGE BORDER SIZE*/
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    animation: image-bounce 1s ease-in-out infinite;
+}
+
+.envy-backcolor::before {
+    content: "";
+    position: absolute;
+    inset: -3px 50px;
+    background: linear-gradient(315deg,#590059,#2d5900); /*BORDER COLORS*/
+    transition: 0.2s;
+    animation: round-border 4s linear infinite;
+}
+
+.envy-backcolor:hover::before {
+    content: "";
+    inset: -20px 0px;
+}
+
+
+
+
+.gluttony {
+    background: #FFC061;
+    background: linear-gradient(180deg, #ffc061 0%, #fa9f50 20%, #db2c75 80%, #b30c9f 100%);
+}
+
+.gluttony-backcolor {
+    display: flex;
+    position: relative;
+    top: 10px;
+    left: 50vw;
+    translate: -50%;
+    width: 140px; /* CHANGE THESE VALUES TO CHANGE BORDER SIZE*/
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    animation: image-bounce 1s ease-in-out infinite;
+}
+
+.gluttony-backcolor::before {
+    content: "";
+    position: absolute;
+    inset: -3px 50px;
+    background: linear-gradient(315deg,#0560af,#af050b); /*BORDER COLORS*/
+    transition: 0.2s;
+    animation: round-border 4s linear infinite;
+}
+
+.gluttony-backcolor:hover::before {
+    content: "";
+    inset: -20px 0px;
+}
+
+
+
+
+.pride {
+    background: #B30C9F;
+    background: linear-gradient(180deg, #b30c9f 0%, #681691 40%, #701d91 90%, #d4a72c 100%);
+}
+
+.pride-backcolor {
+    display: flex;
+    position: relative;
+    top: 10px;
+    left: 50vw;
+    translate: -50%;
+    width: 140px; /* CHANGE THESE VALUES TO CHANGE BORDER SIZE*/
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    animation: image-bounce 1s ease-in-out infinite;
+}
+
+.pride-backcolor::before {
+    content: "";
+    position: absolute;
+    inset: -3px 50px;
+    background: linear-gradient(315deg,#8fe26e,#876ee2); /*BORDER COLORS*/
+    transition: 0.2s;
+    animation: round-border 4s linear infinite;
+}
+
+.pride-backcolor:hover::before {
+    content: "";
+    inset: -20px 0px;
+}
+
+
+
+
+.greed {
+    background: #d4a72c;
+    background: linear-gradient(180deg, #d4a72c 0%, #f7f381 40%, #fffdb5 80%, #a6e9ff 100%);
+}
+
+.greed-backcolor {
+    display: flex;
+    position: relative;
+    top: 10px;
+    left: 50vw;
+    translate: -50%;
+    width: 140px; /* CHANGE THESE VALUES TO CHANGE BORDER SIZE*/
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    animation: image-bounce 1s ease-in-out infinite;
+}
+
+.greed-backcolor::before {
+    content: "";
+    position: absolute;
+    inset: -3px 50px;
+    background: linear-gradient(315deg,#00024a,#4a0002); /*BORDER COLORS*/
+    transition: 0.2s;
+    animation: round-border 4s linear infinite;
+}
+
+.greed-backcolor:hover::before {
+    content: "";
+    inset: -20px 0px;
+}
+
+
+
+
+.sloth {
+    background: #A6E9FF;
+    background: linear-gradient(180deg, #a6e9ff 0%, #4070ff 34%, #3665e4 68%, #f00000 100%);
+}
+
+.sloth-backcolor {
+    display: flex;
+    position: relative;
+    top: 10px;
+    left: 50vw;
+    translate: -50%;
+    width: 140px; /* CHANGE THESE VALUES TO CHANGE BORDER SIZE*/
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    animation: image-bounce 1s ease-in-out infinite;
+}
+
+.sloth-backcolor::before {
+    content: "";
+    position: absolute;
+    inset: -3px 50px;
+    background: linear-gradient(315deg,#c99a1b,#1bc99a); /*BORDER COLORS*/
+    transition: 0.2s;
+    animation: round-border 4s linear infinite;
+}
+
+.sloth-backcolor:hover::before {
+    content: "";
+    inset: -20px 0px;
+}
+
+
+
+
+.wrath {
+    background: #F00000;
+    background: linear-gradient(180deg, #f00000 0%, #bd0d0d 20%, #780a0a 60%, #8c0a35 80%, #db076d 100%);
+}
+
+.wrath-backcolor {
+    display: flex;
+    position: relative;
+    top: 10px;
+    left: 50vw;
+    translate: -50%;
+    width: 140px; /* CHANGE THESE VALUES TO CHANGE BORDER SIZE*/
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    animation: image-bounce 1s ease-in-out infinite;
+}
+
+.wrath-backcolor::before {
+    content: "";
+    position: absolute;
+    inset: -3px 50px;
+    background: linear-gradient(315deg,#87f5f5,#f587f5); /*BORDER COLORS*/
+    transition: 0.2s;
+    animation: round-border 4s linear infinite;
+}
+
+.wrath-backcolor:hover::before {
+    content: "";
+    inset: -20px 0px;
+}
+
+
+
+
+.lust {
+    background: #DB076D;
+    background: linear-gradient(180deg, #db076d 0%, #e800ae 20%, #ff7ad1 60%, #f562c1 80%, #ff87bd 100%);
+}
+
+.lust-backcolor {
+    display: flex;
+    position: relative;
+    top: 10px;
+    left: 50vw;
+    translate: -50%;
+    width: 140px; /* CHANGE THESE VALUES TO CHANGE BORDER SIZE*/
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    animation: image-bounce 1s ease-in-out infinite;
+}
+
+.lust-backcolor::before {
+    content: "";
+    position: absolute;
+    inset: -3px 50px;
+    background: linear-gradient(315deg,#17ff51,#5117ff); /*BORDER COLORS*/
+    transition: 0.2s;
+    animation: round-border 4s linear infinite;
+}
+
+.lust-backcolor:hover::before {
+    content: "";
+    inset: -20px 0px;
+}
+
+
+
+
+/*NAVBAR*/
+
+nav {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    background: #33333385;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 24px;
+    z-index: 5;
+}
+
+nav ul {
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a img {
+    max-width: 64px;
+    max-height: 64px;
+}
+
+
+
+
+/*LAY-OUT*/
+
+/*SINS*/
+
+/*make bg none; then delete this shit*/
+
+.sin-header {
+    position:relative;
+    margin: 0;
+    padding: 2px;
+    display: inline;
+    background: none;
+}
+
+
+/*ENVY*/
+
+.envy-header {
+    position:relative;
+    background: none;
+    padding: 20px;
+}
+
+
+/*IF-STORY*/
+
+.envy-header .if-story {
+    position: absolute;
+    background: none;
+    /*overflow: scroll;*/
+    overflow-x: hidden;
+    overflow-y:hidden;
+    top :190px;
+    left : calc(50vw + 40px );
+    width: 600px;
+    height: 400px;
+}
+
+.envy-header .if-story h1 {
+    font-size: 2em;
+    text-align: center;
+}
+
+.envy-header .if-story p {
+    font-size: 1.5em;
+}
+
+/*FUN-FACT*/
+
+.envy-header .fun-fact {
+    position: absolute;
+    background: none;
+    overflow-x: hidden;
+    top :1000px;
+    left: calc(50vw - 410px - 500px - 10px);
+    width: 600px;
+    height: 400px;
+}
+
+.envy-header .fun-fact h1 {
+    font-size: 2em;
+    text-align: center;
+}
+
+.envy-header .fun-fact p {
+    font-size: 1.5em;
+}
+
+/*IMAGES-VIDEOS*/
+
+/*KISS-SCENE*/
+
+.kiss-scene {
+    position: absolute;
+}
+
+.kiss-scene video {
+    position: absolute;
+    max-width: 400px;
+    top: 550px;
+    left : calc(50vw + 40px + 140px);
+}
+
+/*SUBARU-WITH-FRIENDS*/
+
+.subaru-friends {
+    position: absolute;
+}
+
+.subaru-friends img {
+    position: absolute;
+    max-width: 500px;
+    top :255px;
+    left: calc(50vw - 410px - 500px - 10px);
+}
+
+/*SUBARU-GRIN*/
+
+.subaru-grin {
+    position: absolute;
+}
+
+.subaru-grin img {
+    position: absolute;
+    max-width: 500px;
+    top :550px;
+    left: calc(50vw - 410px - 500px - 10px);
+}
+
+/*SUBARU-HANDS-OUT*/
+
+.subaru-hands-out {
+    position: absolute;
+}
+
+.subaru-hands-out img {
+    position: absolute;
+    max-height: 577px;
+    top :255px;
+    left: calc(50vw - 410px - 0px - 10px);
+} 
+
+
+
+/*GREAT-RABBIT*/
+
+.rbd-spam {
+    position: relative;
+    max-width: 545px;
+    top: 955px;
+    left : calc(50vw + 40px + 100px);
+    cursor: url(./assets/shared/rezero-cursor.png), auto;
+}
+
+.rbd-spam video {
+    position: absolute;
+    max-width: 545px;
+}
+
+.rbd-spam img {
+    pointer-events: none;
+    position: absolute;
+    max-width: 550px;
+}
+
+
+
+/*GLUTTONY*/
+
+.gluttony-header {
+    position:relative;
+    background: none;
+    padding: 20px;
+}
+
+
+/*IF-STORY*/
+
+.gluttony-header .if-story {
+    position: absolute;
+    background: none;
+    /*overflow: scroll;*/
+    overflow-x: hidden;
+    overflow-y:hidden;
+    top :880px;
+    left: calc(50vw + 220px + 180px);
+    width: 300px;
+    height: 800px;
+}
+
+.gluttony-header .if-story h1 {
+    font-size: 2em;
+    text-align: left;
+}
+
+.gluttony-header .if-story p {
+    font-size: 1.5em;
+}
+
+/*FUN-FACT*/
+
+.gluttony-header .fun-fact {
+    position: absolute;
+    background: none;
+    overflow-x: hidden;
+    top :1000px;
+    left: calc(50vw - 150px - 600px);
+    width: 300px;
+    height: 700px;
+}
+
+.gluttony-header .fun-fact h1 {
+    font-size: 2em;
+    text-align: center;
+}
+
+.gluttony-header .fun-fact p {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/*IMAGES-VIDEOS*/
+/*GLUTTONY-RUNNING*/
+
+.gluttony-running {
+    position: absolute;
+}
+
+.gluttony-running video {
+    position: absolute;
+    max-width: 370px;
+    left: calc(50vw + 220px + 180px);
+    top :1450px;
+}
+
+/*GLUTTONY-WITCH*/
+
+.gluttony-witch {
+    position: absolute;
+}
+
+.gluttony-witch img {
+    position: absolute;
+    max-width: 240px;
+    left: 50vw;
+    top: 1200px;
+    translate: -50% -50%;
+}
+
+/*GLUTTONY-SUBARU-AURA-GRINDING*/
+
+.gluttony-subaru-aura-grinding {
+    position: absolute;
+}
+
+.gluttony-subaru-aura-grinding img {
+    position: absolute;
+    max-height: 220px;
+    top :15px;
+    left: calc(50vw - (960px -  0px));
+}
+
+/*GLUTTONY-SUBARU-PATCHING*/
+
+.gluttony-subaru-patching {
+    position: absolute;
+}
+
+.gluttony-subaru-patching img {
+    position: absolute;
+    max-width: 660px;
+    top :300px;
+    left: 50vw;
+    translate: -50%;
+}
+
+/*GLUTTONY-SUBARU-BAD-BOY*/
+
+.gluttony-subaru-bad-boy {
+    position: absolute;
+}
+
+.gluttony-subaru-bad-boy img {
+    position: absolute;
+    max-height: 220px;
+    top :15px;
+    left: calc(50vw - (960px - 1920px + 220px + 199px));
+}
+
+/*GLUTTONY-SUBARU-REGAINING MEMMORIES*/ /*GLUTTONY WITCH IS ALREADY ADDED*/
+
+.gluttony-subaru-regaining-memmories {
+    position: absolute;
+}
+
+.gluttony-subaru-regaining-memmories img {
+    position: absolute;
+    max-height: 220px;
+    top :15px;
+    left: calc(50vw - (960px - 1920px + 220px));
+}
+
+
+/*GLUTTONY-SUBARU-DISSING-OTTO*/
+
+.gluttony-subaru-dissing-otto {
+    position: absolute;
+}
+
+.gluttony-subaru-dissing-otto img {
+    position: absolute;
+    max-width: 240px;
+    top :900px;
+    left: calc(50vw - 255px - 120px)
+}
+
+
+/*GLUTTONY-SUBARU-GOING-CRAZY*/
+
+.gluttony-subaru-going-crazy {
+    position: absolute;
+}
+
+.gluttony-subaru-going-crazy img {
+    position: absolute;
+    max-width: 240px;
+    top :900px;
+    left: calc(50vw + 255px - 120px)
+}
+
+
+/*GLUTTONY-SUBARU-VS-GLUTTONY*/
+
+.gluttony-subaru-vs-gluttony {
+    position: absolute;
+}
+
+.gluttony-subaru-vs-gluttony img {
+    position: absolute;
+    width: 240px;
+    top :1200px;
+    left: calc(50vw - 255px - 120px)
+}
+
+
+/*GLUTTONY-SUBARU-MOLESTED*/
+
+.gluttony-subaru-molested {
+    position: absolute;
+}
+
+.gluttony-subaru-molested img {
+    position: absolute;
+    max-width: 240px;
+    top :1225px;
+    left: calc(50vw + 255px - 120px)
+}
+
+
+
+
+
+
+
+
+/*PRIDE*/
+
+
+/*IF-STORY*/
+
+.pride-header .if-story {
+    position: absolute;
+    background: none;
+    overflow-x: hidden;
+    top :870px;
+    left: calc(50vw - (960px -  16px));
+    width: 500px;
+    height: 500px;
+}
+
+.pride-header .if-story h1 {
+    font-size: 2em;
+    text-align: center;
+}
+
+.pride-header .if-story p {
+    font-size: 1.5em;
+}
+
+/*FUN-FACT*/
+
+.pride-header .fun-fact {
+    position: absolute;
+    background: none;
+    /*overflow: scroll;*/
+    overflow-x: hidden;
+    overflow-y:hidden;
+    top :890px;
+    left: calc(50vw - (960px -  1335px));
+    width: 300px;
+    height: 800px;
+}
+
+.pride-header .fun-fact h1 {
+    font-size: 2em;
+    text-align: left;
+}
+
+.pride-header .fun-fact p {
+    font-size: 1.5em;
+    text-align: left;
+}
+
+/*COOL-SHIT*/
+
+.pride-header .bloody-font {
+    position: absolute;
+    /*overflow: scroll;*/
+    overflow-x: hidden;
+    overflow-y:hidden;
+    top :100px;
+    left: calc(50vw - (960px -  0px));
+    width: 1920px;
+    height: 1080px;
+}
+
+.pride-header .bloody-font h2 {
+    font-size: 8em;
+    background: -webkit-linear-gradient(#a61e16,#dc4a00, #db4f4f);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+    height: fit-content;
+}
+
+
+
+#SIN-TEXT {
+    background: -webkit-linear-gradient(#5f0343,#e4e2e1, #db4f4f);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    translate: 550px -50px;
+    rotate: -30deg;
+}
+
+#WILL-TEXT {
+    background: -webkit-linear-gradient(#db4f4f,#c22520, #db4f4f);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    translate: 1000px -240px;
+    rotate: 30deg;
+}
+
+#BE-TEXT {
+    background: -webkit-linear-gradient(#db4f4f,#ca8f67, #990808);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    translate: 600px -400px;
+    rotate: 10deg;
+}
+
+#REPAID-TEXT {
+    background: -webkit-linear-gradient(#ff4107,#ffc832, #313030);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    translate: 840px -550px;
+    rotate: -20deg;
+}
+
+#IN-PAIN-TEXT {
+    background: -webkit-linear-gradient(#b81050,#7e0901, #250211);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    translate: 720px -560px;
+    rotate: 0deg;
+}
+
+.EIGHTY-EIGHT {
+    position: absolute;
+    overflow-x: hidden;
+    overflow-y:hidden;
+    font-family: bloody;
+    font-size: 4em;
+    width: 1000px;
+    top :1750px;
+    left: calc(50vw - (960px -  0px));
+    background: -webkit-linear-gradient(#ffffff,#d8d8d8, #272727, #000000, #7a7a7a);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    translate: 400px -425px;
+    rotate: 90deg;
+}
+
+
+
+
+/*IMAGES-VIDEOS*/
+/*PRIDE-SUBARU-ANIMATION*/
+
+.pride-subaru-animation {
+    position: absolute;
+}
+
+.pride-subaru-animation video {
+    position: absolute;
+    max-height: 390px;
+    left: calc(50vw - (960px -  1000px));
+    top :1275px;
+    z-index: 2;
+}
+
+
+/*PRIDE-SUBARU-*/
+/*PRIDE-SUBARU-TEASER*/
+
+.pride-subaru-teaser {
+    position: absolute;
+}
+
+.pride-subaru-teaser img {
+    position: absolute;
+    max-height: 670px;
+    left: calc(50vw - (960px -  0px));
+    top: 222px;
+}
+
+/*PRIDE-SUBARU-BOOK*/
+
+.pride-subaru-book {
+    position: absolute;
+}
+
+.pride-subaru-book img {
+    position: absolute;
+    max-width: 576px;
+    top :222px;
+    left: calc(50vw - (960px -  1920px + 277px + 300px));
+}
+
+/*PRIDE-SUBARU-FUCKING-REINHEART*/
+
+.pride-subaru-fucking-reinheart {
+    position: absolute;
+}
+
+.pride-subaru-fucking-reinheart img {
+    position: absolute;
+    max-height: 370px;
+    top :522px;
+    left: calc(50vw - (960px -  1920px + 277px + 300px));
+}
+
+/*PRIDE-SUBARU-BALLS*/
+
+.pride-subaru-balls {
+    position: absolute;
+}
+
+.pride-subaru-balls img {
+    position: absolute;
+    max-height: 370px;
+    top :522px;
+    left: calc(50vw - (960px -  1920px + 300px));
+}
+
+/*PRIDE-SUBARU-MIDDLE-FINGER*/
+
+.pride-subaru-middle-finger {
+    position: absolute;
+}
+
+.pride-subaru-middle-finger img {
+    position: absolute;
+    max-width: 325px;
+    top :900px;
+    left: calc(50vw - (960px -  1000px));
+}
+
+/*PRIDE-SUBARU-IN-BATH*/
+
+.pride-subaru-in-bath {
+    position: absolute;
+}
+
+.pride-subaru-in-bath img {
+    position: absolute;
+    max-height: 390px;
+    top :1275px;
+    left: calc(50vw - (960px -  0px));
+}
+
+
+
+
+
+
+
+
+
+
+
+/*GREED*/
+
+.greed-header {
+    position:relative;
+    background: none;
+    padding: 20px;
+}
+
+
+/*IF-STORY*/
+
+.greed-header .if-story {
+    position: absolute;
+    background: none;
+    /*overflow: scroll;*/
+    overflow-x: hidden;
+    overflow-y:hidden;
+    top :200px;
+    left: calc(50vw - (960px -  960px - 225px));
+    width: 700px;
+    height: 400px;
+}
+
+.greed-header .if-story h1 {
+    font-size: 2em;
+    text-align: center;
+}
+
+.greed-header .if-story p {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/*FUN-FACT*/
+
+.greed-header .fun-fact {
+    position: absolute;
+    background: none;
+    overflow-x: hidden;
+    top :540px;
+    left: calc(50vw - (960px - 1125px));
+    width: 270px;
+    height: 760px;
+}
+
+.greed-header .fun-fact h1 {
+    font-size: 2em;
+    text-align: right;
+}
+
+.greed-header .fun-fact p {
+    font-size: 1.5em;
+    text-align: right;
+}
+
+/*IMAGES-VIDEOS*/
+
+/*greed-aura-maxxing*/
+
+.greed-aura-maxxing {
+    position: absolute;
+}
+
+.greed-aura-maxxing video {
+    position: absolute;
+    max-height: 350px;
+    top :1000px;
+    left: calc(50vw - (960px -  337px));
+    
+}
+
+/*greed-subaru-dream*/
+
+.greed-subaru-dream {
+    position: absolute;
+}
+
+.greed-subaru-dream video {
+    position: absolute;
+    max-height: 350px;
+    top :900px;
+    left: calc(50vw - (960px -  1920px + 225px + 280px + 280px));
+
+}
+
+/*greed-subaru-bamboozled*/
+
+.greed-subaru-bamboozled {
+    position: absolute;
+}
+
+.greed-subaru-bamboozled img {
+    position: absolute;
+    max-width: 300px;
+    top :275px;
+    left: calc(50vw - (960px - 960px));
+    translate: -50%;
+}
+
+/*greed-echinda*/
+
+.greed-echinda {
+    position: absolute;
+}
+
+.greed-echinda img {
+    position: absolute;
+    max-height: 400px;
+    top :190px;
+    left: calc(50vw - (960px -  865px));
+    translate: -50%;
+}
+
+/*greed-subaru-aura-farming*/
+
+.greed-subaru-aura-farming {
+    position: absolute;
+}
+
+.greed-subaru-aura-farming img {
+    position: absolute;
+    max-height: 400px;
+    top :600px;
+    left: calc(50vw - (960px -  0px));
+}
+
+/*greed-subaru-hero*/
+
+.greed-subaru-hero {
+    position: absolute;
+}
+
+.greed-subaru-hero img {
+    position: absolute;
+    max-height: 400px;
+    top :500px;
+    left: calc(50vw - (960px -  1920px + 280px));
+}
+
+/*greed-subaru-molested*/
+
+.greed-subaru-molested {
+    position: absolute;
+}
+
+.greed-subaru-molested img {
+    position: absolute;
+    max-height: 400px;
+    top :500px;
+    left: calc(50vw - (960px -  1920px + 225px + 280px));
+}
+
+/*greed-subaru-deaths*/
+
+.greed-subaru-deaths {
+    position: absolute;
+}
+
+.greed-subaru-deaths img {
+    position: absolute;
+    max-height: 600px;
+    top :1000px;
+    left: calc(50vw - (960px -  0px));
+}
+
+/*greed-regulus*/
+
+.greed-regulus {
+    position: absolute;
+}
+
+.greed-regulus img {
+    position: absolute;
+    max-height: 220px;
+    top :800px;
+    left: calc(50vw - (960px - 0px + 100px));
+}
+
+/*greed-subaru-mirror*/
+
+.greed-subaru-mirror {
+    position: absolute;
+}
+
+.greed-subaru-mirror img {
+    position: absolute;
+    max-width: 505px;
+    top :900px;
+    left: calc(50vw - (960px -  1920px + 225px + 280px));
+}
+
+
+/*TEA*/
+/*1325px is also amazing / 1225 now */
+
+.tea {
+    position: relative;
+    cursor: url(./assets/shared/rezero-cursor.png), auto;
+    top: 1200px;
+    left: calc(50vw - (960px - 1920px + 370px));
+}
+
+.tea img {
+    position: absolute;
+}
+
+.greed-echinda-back-tea {
+    max-height: 155px;
+    pointer-events: none;
+}
+
+.greed-echinda-cup-tea {
+    max-height: 155px;
+    pointer-events: none;
+}
+
+.greed-echinda-real-tea {
+    max-height: 155px;
+    top: -50px;
+    left: 43px;
+}
+
+
+.greed-echinda-real-tea {
+  animation: tea-drinking 4s ease-in-out forwards;
+  animation-play-state: paused;
+
+    &:hover {
+        animation-play-state: running;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/*SLOTH*/
+
+
+.sloth-header {
+    position: relative;
+    background: none;
+    padding: 20px;
+}
+
+/*COMIC-STYLE-BORDER*/
+
+.comic-box{
+    font-family: 'bangers'; /*CHANGE TO "bangers" */
+    background:none;
+    border: solid black;
+    border-color: black;
+    transform: rotate(-2deg);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/*IF-STORY*/
+
+.sloth-header .if-story {
+    position: absolute;
+    background: none;
+    /*overflow: scroll;*/
+    overflow-x: hidden;
+    overflow-y:hidden;
+    width: 500px;
+    height: 600px;
+    top :725px;
+    left: calc(50vw - (960px -  1920px + 550px));
+}
+
+.sloth-header .if-story h1 {
+    font-size: 2em;
+    text-align: center;
+}
+
+.sloth-header .if-story p {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/*FUN-FACT*/
+
+.sloth-header .fun-fact {
+    position: absolute;
+    background: none;
+    overflow-x: hidden;
+    top :325px;
+    left: calc(50vw - (960px -  1920px + 925px));
+    width: 270px;
+    height: 760px;
+}
+
+.sloth-header .fun-fact h1 {
+    font-size: 2em;
+    text-align: right;
+}
+
+.sloth-header .fun-fact p {
+    font-size: 1.5em;
+    text-align: right;
+}
+
+
+
+/*IMAGES-VIDEOS*/
+
+
+
+/*sloth-subaru-headlock*/
+
+.sloth-subaru-headlock{
+    position: absolute;
+}
+
+.sloth-subaru-headlock video {
+    position: absolute;
+    max-width: 500px;
+    top: 399px;
+    left: calc(50vw - (960px - 400px));
+    border-radius: 3%;
+
+    clip-path: path("M 4,17 L 500,0 L 500,230 L 460,270 L 40,281 L 15,270");
+    
+}
+
+.comic-box-sloth-subaru-headlock{
+    position: absolute;
+    border-width: 10px 10px 16px 16px;
+    border-radius:25% 10% 12% 21%/4% 2% 34% 14%;
+    height: 260px;
+    width: 480px;
+    top :400px;
+    left: calc(50vw - (960px - 400px));
+}
+
+
+/*sloth-subaru-who-is-rem*/
+
+.sloth-subaru-who-is-rem {
+    position: absolute;
+}
+
+.sloth-subaru-who-is-rem video {
+    position: absolute;
+    max-width: 500px;
+    top: 1505px;
+    left: calc(50vw - (960px - 960px));
+    translate: -50% -50%;
+
+    border-radius: 5%;
+    clip-path: path("M 4,17 L 500,0 L 500,230 L 460,270 L 40,281 L 15,270");
+
+}
+
+.comic-box-sloth-subaru-who-is-rem{
+    position: absolute;
+    border-width: 15px 15px 20px 20px;
+    border-radius:25% 10% 12% 21%/4% 2% 34% 14%;
+    height: 260px;
+    width: 470px;
+    top: 1360px;
+    left: calc(50vw - (960px - 710px));
+}
+
+
+
+
+/*sloth-subaru-rem*/
+
+.sloth-subaru-rem {
+    position: absolute;
+}
+
+.sloth-subaru-rem video {
+    position: absolute;
+    max-width: 700px;
+    top :960px;
+    left: calc(50vw - (960px - 960px));
+    translate: -50% -50%;
+    clip-path: path("M 45,5 L 690,0 L 695,200 L 700,320 L 650,380 L 100,393 L 50,380 L 10,360 L 5,300 L 10,100");
+
+    /*clip-path: ellipse(350px 150px at 50% 50%);*/
+
+}
+
+.comic-box-sloth-subaru-rem{
+    position: absolute;
+    border-width: 14px 14px 20px 20px;
+    border-radius: 10% 95% 16% 45%/75% 6% 25% 17%;
+    height: 380px;
+    width: 680px;
+    top: 755px;
+    left: calc(50vw - (960px - 600px));
+}
+
+
+
+
+
+/*sloth-subaru-cutie-patotie*/
+
+
+
+.sloth-subaru-cutie-patotie {
+    position: absolute;
+}
+
+.sloth-subaru-cutie-patotie img {
+    position: absolute;
+    max-height: 400px;
+    top :300px;
+    left: calc(50vw - (960px - 75px));
+    border-radius: 3%;
+}
+
+.comic-box-sloth-subaru-cutie-patotie{
+    position: absolute;
+    border-width: 10px 10px 16px 16px;
+    border-radius:4% 95% 6% 95%/95% 4% 92% 5%;
+    height: 392px;
+    width: 232px;
+    top :292px;
+    left: calc(50vw - (960px - 68px));
+}
+
+
+/*sloth-subaru-family*/
+
+.sloth-subaru-family {
+    position: absolute;
+}
+
+.sloth-subaru-family img {
+    position: absolute;
+    max-height: 400px;
+    top :300px;
+    left: calc(50vw - (960px - 1920px + 75px + 540px ));
+    border-radius: 5%;
+}
+
+.comic-box-sloth-subaru-family{
+    position: absolute;
+    border-width: 14px 14px 20px 20px;
+    border-radius: 2% 95% 6% 45%/95% 6% 25% 7%;
+    height: 392px;
+    width: 530px;
+    top :290px;
+    left: calc(50vw - (960px - 1920px + 75px + 552px ));
+}
+
+
+/*sloth-witch*/
+
+.sloth-witch {
+    position: absolute;
+}
+
+.sloth-witch img {
+    position: absolute;
+    max-height: 390px;
+    top :800px;
+    left: calc(50vw - (960px - 170px));
+}
+
+
+/*sloth-subaru-aura-farming*/
+
+.sloth-subaru-aura-farming {
+    position: absolute;
+}
+
+.sloth-subaru-aura-farming img {
+    position: absolute;
+    max-height: 475px;
+    top :860px;
+    left: calc(50vw - (960px - 75px));
+}
+
+
+/*sloth-subaru-cool*/
+
+.sloth-subaru-cool {
+    position: absolute;
+}
+
+.sloth-subaru-cool img {
+    position: absolute;
+    max-width: 340px;
+    top :1308px;
+    left: calc(50vw - (960px - 75px));
+    border-radius: 5%;
+}
+
+.comic-box-sloth-subaru-cool{
+    position: absolute;
+    border-width: 15px 15px 20px 20px;
+    border-radius:95% 4% 92% 5%/4% 95% 6% 95%;
+    height: 323px;
+    width: 323px;
+    top :1300px;
+    left: calc(50vw - (960px - 65px));
+    transform: rotate(2deg);
+}
+
+
+/*sloth-archbishop*/
+
+.sloth-archbishop {
+    position: absolute;
+}
+
+.sloth-archbishop img {
+    position: absolute;
+    max-width: 350px;
+    top :1310px;
+    left: calc(50vw - (960px - 1920px + 75px + 350px));
+}
+
+.comic-box-sloth-archbishop{
+    position: absolute;
+    border-width: 15px 15px 20px 20px;
+    border-radius:95% 4% 92% 5%/4% 95% 6% 95%;
+    height: 290px;
+    width: 333px;
+    top :1300px;
+    left: calc(50vw - (960px - 1920px + 75px + 360px));
+    transform: rotate(2deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*WRATH*/
+
+
+
+.wrath-header {
+    position: relative;
+    background: none;
+    padding: 20px;
+}
+
+
+
+/*WRATH-COIN-FLIP*/
+
+
+.wrath-subaru-coin-wrapper {
+  position: absolute;
+  scale: 2;
+  top: 950px;
+  left: calc(50vw - (960px - 1920px + 750px));
+}
+
+.wrath-subaru-coin-frame {
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    max-width: 150px;
+    max-height: 150px;
+    pointer-events: none;
+}
+
+.wrath-subaru-coin-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  perspective: 1000px;
+}
+
+.wrath-subaru-coin {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: spin 0.3s linear infinite;
+  transition: transform 0.2s ease-out;
+  z-index: 2;
+}
+
+.wrath-subaru-coin-heads, .wrath-subaru-coin-tails {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.wrath-subaru-coin-heads {
+  transform: rotateY(0deg);
+}
+
+.wrath-subaru-coin-tails {
+  transform: rotateY(180deg);
+}
+
+@keyframes spin {
+  0%   { transform: rotateY(0deg); }
+  50%  { transform: rotateY(180deg); }
+  100% { transform: rotateY(360deg); }
+}
+
+.wrath-subaru-coin-container:hover .wrath-subaru-coin {
+  animation: none;
+  transform: rotateY(0deg);
+}
+
+.wrath-subaru-coin-flip-sound {
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  z-index: 3;
+  opacity: 0;
+  pointer-events: auto;
+  clip-path: circle(16.5% at 50% 50%);
+  object-fit: cover;
+}
+
+
+
+/*IF-STORY*/
+
+.wrath-header .if-story {
+    position: absolute;
+    background: none;
+    /*overflow: scroll;*/
+    width: 500px;
+    height: 500px;
+    top : 245px;
+    left: calc(50vw - (960px -  560px));
+}
+
+.wrath-header .if-story h1 {
+    font-size: 2em;
+    text-align: center;
+}
+
+.wrath-header .if-story p {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/*FUN-FACT*/
+
+.wrath-header .fun-fact {
+    position: absolute;
+    background: none;
+    top :240px;
+    left: calc(50vw - (960px -  1920px + 825px));
+    width: 225px;
+    height: 900px;
+}
+
+.wrath-header .fun-fact h1 {
+    font-size: 2em;
+    text-align: right;
+    padding: 5px;
+}
+
+.wrath-header .fun-fact p {
+    font-size: 1.5em;
+    text-align: right;
+    padding: 5px;
+}
+
+
+/*boxes*/
+
+.wrath-subaru-border-box {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+  border: 5px solid transparent;
+  border-image: linear-gradient(to right, #d4af37, #ffd700) 1;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.15);
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: rotate(0deg); /* default rotation */
+  background-clip: padding-box;
+  font-weight: bold;
+  color: #ffeeba;
+  text-shadow: 1px 1px #000;
+
+}
+
+.wrath-subaru-border-box:hover {
+  transform: rotate(0deg) scale(1.02);
+  box-shadow: 0 0 50px rgba(255, 215, 0, 0.4);
+}
+
+
+
+
+
+/*BOX WITH OVERLAY*/
+
+
+.wrath-subaru-if-story-border-box {
+  width: fit-content;
+  height: fit-content;
+  transform: rotate(2deg);
+  padding: 0;
+}
+
+
+.wrath-subaru-if-story-border-box-glow {
+  position: absolute;
+  width: 490px;
+  height: 500px;
+  background-color:rgba(255, 255, 255, 0);
+  translate: 0px -250px;
+  opacity: 1;
+  transition: 1s;
+}
+
+
+.wrath-subaru-if-story-border-box:hover .wrath-subaru-if-story-border-box-glow { 
+
+  background-color:rgb(112, 11, 20);
+  transform: translateY(500px) scaleY(0.1) ;
+  opacity: 0;
+  transition: 1s;
+
+}
+
+
+
+
+.wrath-subaru-fun-fact-border-box {
+  width: fit-content;
+  height: fit-content;
+  transform: rotate(2deg);
+  padding: 0;
+}
+
+
+.wrath-subaru-fun-fact-border-box-glow {
+  position: absolute;
+  width: 215px;
+  height: 400px;
+  background-color:rgba(255, 255, 255, 0);
+  translate: 0px -250px;
+  opacity: 1;
+  transition: 2s;
+}
+
+
+.wrath-subaru-fun-fact-border-box:hover .wrath-subaru-fun-fact-border-box-glow { 
+
+  background-color:rgb(70, 0, 67);
+  transform: translateY(900px) scaleY(0.1) ;
+  opacity: 0;
+  transition: 2s;
+
+}
+
+
+
+
+
+
+/*IMAGES-VIDEOS*/
+
+
+/*NORMAL-BOX*/
+
+
+
+
+.wrath-subaru-inner-conflict-border-box {
+    width: fit-content;
+    height: fit-content;
+    top: 240px;
+    left: calc(50vw - (960px - 1920px + 575px));
+    transform: rotate(3deg);
+    
+}
+
+.wrath-subaru-inner-conflict-border-box img {
+    max-width: 500px;
+    border-radius: 5%;
+
+}
+
+
+.wrath-subaru-nonchallant-border-box {
+    width: fit-content;
+    height: fit-content;
+    top: 620px;
+    left: calc(50vw - (960px -  1920px + 425px));
+    transform: rotate(1deg);
+    
+}
+
+.wrath-subaru-nonchallant-border-box img {
+    max-height: 500px;
+    border-radius: 5%;
+
+}
+
+
+
+
+.wrath-arch-bishop-vs-pricela-border-box {
+    width: fit-content;
+    height: fit-content;
+    top: 1200px;
+    left: calc(50vw - (960px -  1920px + 660px));
+    transform: rotate(2deg);
+    
+}
+
+.wrath-arch-bishop-vs-pricela-border-box img {
+    max-height: 325px;
+    border-radius: 5%;
+
+}
+
+
+
+
+.wrath-sin-arch-bishop-border-box {
+    width: fit-content;
+    height: fit-content;
+    top: 1200px;
+    left: calc(50vw - (960px -  960px));
+    transform: rotate(-5deg);
+    translate: -50%;
+    
+}
+
+.wrath-sin-arch-bishop-border-box img {
+    max-height: 325px;
+    border-radius: 5%;
+
+}
+
+
+
+
+.wrath-coin-flip-animation-border-box {
+    width: fit-content;
+    height: fit-content;
+    top: 1200px;
+    left: calc(50vw - (960px -  50px));
+    transform: rotate(5deg);
+    
+}
+
+.wrath-coin-flip-animation-border-box video {
+    max-height: 325px;
+    border-radius: 5%;
+
+}
+
+
+
+
+.wrath-subaru-dead-inside-border-box {
+    width: fit-content;
+    height: fit-content;
+    top: 240px;
+    left: calc(50vw - (960px -  50px));
+    transform: rotate(1deg);
+    
+}
+
+.wrath-subaru-dead-inside-border-box img {
+    max-width: 400px;
+    border-radius: 5%;
+
+}
+
+
+
+.wrath-subaru-heads-or-tails-border-box {
+    width: fit-content;
+    height: fit-content;
+    top: 720px;
+    left: calc(50vw - (960px -  550px));
+    transform: rotate(2deg);
+    
+}
+
+.wrath-subaru-heads-or-tails-border-box video {
+    max-height: 400px;
+    border-radius: 5%;
+
+}
+
+
+/*
+
+. {
+    width: fit-content;
+    height: fit-content;
+    top: 750px;
+    left: calc(50vw - (960px -  0px));
+    transform: rotate(2deg);
+    
+}
+
+. img {
+    max-height: 500px;
+    border-radius: 5%;
+
+}
+
+*/
+
+
+
+/*LUST*/
+
+
+/*IF-STORY*/
+
+.lust-header .if-story {
+    position: absolute;
+    background: none;
+    top :290px;
+    left: calc(50vw - (960px - 200px));
+    width: 325px;
+    height: 500px;
+}
+
+.lust-header .if-story h1 {
+    font-size: 2em;
+    text-align: left;
+    padding: 15px;
+}
+
+.lust-header .if-story p {
+    font-size: 1.2em;
+    text-align: left;
+    padding: 20px;
+}
+
+/*FUN-FACT*/
+
+.lust-header .fun-fact {
+    position: absolute;
+    background: none;
+    top :290px;
+    left: calc(50vw - (960px - 1920px + 650px));
+    width: 425px;
+    height: 300px;
+}
+
+.lust-header .fun-fact h1 {
+    font-size: 2em;
+    text-align: left;
+    padding: 15px;
+}
+
+.lust-header .fun-fact p {
+    font-size: 1em;
+    text-align: left;
+    padding: 15px;
+}
+
+
+/*SENSETIVE-CONTENT-BLUR*/
+
+.lust-blur {
+    position: relative;
+    pointer-events: none;
+}
+
+
+.border-box {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: rgb(68, 65, 65);
+  border: 5px solid transparent;
+  border-image: linear-gradient(120deg, #ff7eb9, #ffbe7b, #b6ffb0, #a2ecff) 1;
+  box-shadow: 0 0 40px rgb(1, 34, 1);
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: rotate(0deg); /* default rotation */
+  background-clip: padding-box;
+  font-weight: bold;
+  color: #ffeeba;
+  text-shadow: 2px 2px #000;
+
+}
+
+/* Hover button in center + transition */
+.animation-wrapper {
+  position: relative;
+  top: 700px;
+  left: calc(50vw - (960px - 0));
+}
+
+
+/*CHANGABLES*/
+
+/*BORDER*/
+
+.border-box-1 {
+    width: 325px;
+    height: 500px;
+    transform: rotate(0deg);
+    pointer-events: none;
+    z-index: 0;
+
+    top: 550px;
+    left: calc(50vw - (960px - 1670px ));
+    translate: -50% -50%;
+}
+
+.border-box-1 p {
+    padding: 10px;
+    font-size: 1.25em;
+}
+/*OVER-LAY*/
+
+/*ANIMATE THE OVERLAY ONLY*/
+
+.overlay {
+    position: absolute;
+    transform-origin: top left;
+    width: 316px; /* - 10*/
+    height: 490px; /* - 10*/
+    background-color: rgba(235, 235, 235, 0.2);
+    backdrop-filter: blur(10px);
+    pointer-events: none;
+    z-index: 1;
+
+    top: 550px;
+    left: calc(50vw - (960px - 1670px ));
+    translate: -50% -50%;
+
+}
+
+
+/*BUTTERFLY*/ /*MIGHT NEED TO ANIMATE .butterfly img INSTEAD... yup i was right*/
+
+.butterfly img {
+    position: absolute;
+    max-width: 150px;
+    pointer-events: none;
+    z-index: 2;
+
+    top: 685px;
+    left: calc(50vw - (960px - 755px));
+
+}
+
+
+/*HOVER*/
+
+.hover-trigger {
+    position: absolute;
+    padding: 30px 50px;
+    width: fit-content;
+    background-color: rgba(235, 235, 235, 0.4);
+    backdrop-filter: blur(20px);
+    opacity: 0.5;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    top: 800px;
+    left: calc(50vw - (960px - 700px));
+    translate: -50% -50%;
+}
+
+.hover-trigger:hover {
+  background-color: rgba(255, 255, 255, 0.3) ;
+  backdrop-filter: blur(15px);
+  opacity: 1;
+  scale: 1.1;
+}
+
+
+/* animation setup */
+
+
+
+
+/* THE ANIMATIONS BABY */
+
+.butterfly img {
+    animation: butterfly-animation 16.6s cubic-bezier(0.25, 0.1, 0.25, 1.0) forwards paused;
+}
+
+.overlay {
+    animation: overlay-animation 16.6s cubic-bezier(0.25, 0.1, 0.25, 1.0) forwards paused;
+}
+
+/* Hover triggers animation to play */
+.animation-wrapper:hover .animatables {
+    animation-play-state: running;
+}
+
+.animation-wrapper:hover .butterfly img {
+    animation-play-state: running;
+}
+
+
+@keyframes butterfly-animation {
+    
+    /*declare original values*/
+
+  0% {
+    transform: rotate(20deg) scaleX(1);
+    scale: 1;
+    translate: 0px 0px;
+  }
+
+  10% {
+    transform: rotate(136deg) scaleX(0.8);
+    scale: 1;
+    translate: 20px 75px;
+  }
+
+  15% {
+    transform: rotate(154deg) scaleX(1);
+    scale: 1;
+    translate: 80px 175px;
+  }
+
+  20% {
+    transform: rotate(27deg) scaleX(1);
+    scale: 1;
+    translate: 300px -125px;
+  }
+
+  30% {
+    transform: rotate(-33deg) scaleX(0.8);
+    scale: 1;
+    translate: 180px -240px;
+  }
+
+  35% {
+    transform: rotate(-134deg) scaleX(1);
+    scale: 1;
+    translate: 80px -120px;
+  }
+
+  40% {
+    transform: rotate(-37deg) scaleX(1);
+    scale: 1;
+    translate: -130px -100px;
+  }
+
+  50% {
+    transform: rotate(60deg) scaleX(0.8);
+    scale: 1;
+    translate: -275px -360px;
+  }
+
+  55% {
+    transform: rotate(148deg) scaleX(1);
+    scale: 1;
+    translate: 10px -560px;
+  }
+
+  60% {
+    transform: rotate(206deg) scaleX(0.8);
+    scale: 1;
+    translate: -80px -320px;
+  }
+
+  70% {
+    transform: rotate(38deg) scaleX(1);
+    scale: 1;
+    translate: 180px 220px;
+  }
+
+  75% {
+    transform: rotate(-45deg) scaleX(0.8);
+    scale: 1;
+    translate: 980px 0px;
+  }
+
+  80% {
+    transform: rotate(-32deg) scaleX(1);
+    scale: 1.5;
+    translate: 900px -40px;
+  }
+
+  85% {
+    transform: rotate(-32deg) scaleX(0.8);
+    scale: 2;
+    translate: 890px -130px;
+    opacity: 1;
+  }
+
+  95% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(-32deg) scaleX(1);
+    scale: 4;
+    translate: 500px -740px;
+    opacity: 0;
+  }
+}
+
+
+
+@keyframes overlay-animation {
+  0%, 80% {
+    scale: 1;
+  }
+
+  85% {
+    scale: 0.84;
+  }
+
+  88% {
+    scale: 0.5;
+  }
+
+  90% {
+    scale: 0.2;
+  }
+
+  93% {
+    scale: 0.05;
+  }
+
+  95%, 100% {
+    scale: 0;
+  }
+}
+
+
+
+
+
+
+.blur-backdrop {
+    position: absolute;
+    background-color: rgba(235, 235, 235, 0.2);
+    border-radius: 50px;
+    opacity: 1;
+    backdrop-filter: blur(15px);
+    z-index: 1;
+    min-width: 100vw;
+    min-height: 200vh;
+    top: -100px;
+    pointer-events: none;
+    animation: blur-out linear forwards;
+    animation-timeline: view();
+    animation-range: 90vh;
+    animation-range-end: 140vh;
+}
+
+
+
+.eye-no-dash img {
+    z-index: 2;
+    position: absolute;
+    top: 400px;
+    left: calc(50vw - (960px - 960px));
+    transform: translate(-50% , -50%);
+    max-width: 100px;
+    opacity: 1;
+    animation: blur-out-eye linear forwards;
+    animation-timeline: view();
+    animation-range-start: 40vh;
+    animation-range-end: 90vh;
+}
+
+
+.dash img {
+    z-index: 2;
+    position: absolute;
+    top: 400px;
+    left: calc(50vw - (960px - 960px));
+    transform: translate(-50% , -50%);
+    max-width: 100px;
+    opacity: 1;
+    animation: blur-out-dash linear forwards;
+    animation-timeline: view();
+    animation-range-start: 40vh;
+    animation-range-end: 90vh;
+}
+
+
+.sensitive-content-text{
+    z-index: 2;
+    position: absolute;
+    top: 600px;
+    left: calc(50vw - (960px - 960px));
+    transform: translate(-50% , -50%);
+    font-size: 40px;
+    max-width: fit-content;
+    max-height: 40px;
+    background-color: none;
+    color: black;
+    opacity: 1;
+    animation: blur-out-sensitive-content linear forwards;
+    animation-timeline: view();
+    animation-range-start: 10vh;
+    animation-range-end: 90vh;
+}
+
+
+@keyframes blur-out {
+
+    from {opacity: 1;}
+    to {opacity: 0; filter: blur(0px);}
+
+}
+
+
+@keyframes blur-out-eye {
+    from {opacity: 1;}
+    to {opacity: 0; filter: blur(0px); translate: -500px 1000px;}
+}
+
+
+@keyframes blur-out-dash {
+    from {opacity: 1;}
+    to {opacity: 0; filter: blur(0px); translate: 500px -1000px;}
+}
+
+
+@keyframes blur-out-sensitive-content {
+    from {opacity: 1; font-size: 40px;}
+    to {opacity: 0; font-size: 10px; filter: blur(0px); translate: 0px 1000px;}
+}
+
+
+
+/*SENSETIVE-CONTENT-BLUR-END*/
+
+
+
+
+
+.border-box-lust {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: rgb(68, 65, 65);
+  border: 5px solid transparent;
+  border-image: linear-gradient(120deg, #ff7eb9, #ffbe7b, #b6ffb0, #a2ecff) 1;
+  box-shadow: 0 0 40px rgb(1, 34, 1);
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1em;
+  transform: rotate(0deg); /* default rotation */
+  background-clip: padding-box;
+  font-weight: bold;
+  color: #ffeeba;
+  text-shadow: 2px 2px #000;
+
+}
+
+
+
+.border-box-lust-1 {
+    width: 425px;
+    height: 300px;
+    pointer-events: none;
+    z-index: 0;
+    top: 0px;
+}
+
+.overlay-lust-1 {
+    position: absolute;
+    transform-origin: top left;
+    width: 416px; /* - 10*/
+    height: 290px; /* - 10*/
+    background-color: rgba(235, 235, 235, 0.2);
+    backdrop-filter: blur(10px);
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+    animation: blur-fuck-you 1s forwards;
+    animation-play-state: paused;
+
+}
+
+
+.border-box-lust-2 {
+    width: 355px;
+    height: 550px;
+    pointer-events: none;
+    z-index: 0;
+    top: 0px;
+}
+
+.overlay-lust-2 {
+    position: absolute;
+    transform-origin: top left;
+    width: 345px; /* - 10*/
+    height: 540px; /* - 10*/
+    background-color: rgba(235, 235, 235, 0.2);
+    backdrop-filter: blur(10px);
+    opacity: 1;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+    animation: blur-fuck-you 1s forwards;
+    animation-play-state: paused;
+
+}
+
+
+
+
+.lust-subaru-harem {
+    position: relative;
+    left: calc(50vw - (960px - 680px));
+    top: 400px;
+}
+
+
+.border-box-lust-3 {
+    width: 510px;
+    height: 635px;
+    pointer-events: none;
+    z-index: 0;
+    top: 0px;
+}
+
+.overlay-lust-3 {
+    position: absolute;
+    transform-origin: top left;
+    width: 500px; /* - 10*/
+    height: 625px; /* - 10*/
+    background-color: rgba(235, 235, 235, 0.2);
+    backdrop-filter: blur(10px);
+    opacity: 1;
+    top: 5px;
+    z-index: 1;
+    animation: blur-fuck-you 1s forwards;
+    animation-play-state: paused;
+
+}
+
+
+.lust-subaru-harem img {
+    position: absolute;
+    max-width: 450px;
+    top: 312px;
+    translate: -50% -50%;
+
+}
+
+
+
+
+.overlay-lust-1:hover {
+    animation-play-state: running;
+}
+
+.overlay-lust-2:hover {
+    animation-play-state: running;
+}
+
+.overlay-lust-3:hover {
+    animation-play-state: running;
+}
+
+
+@keyframes blur-fuck-you {
+
+    0% {
+        transform: translate(0px, 0px);
+        opacity: 1;
+        backdrop-filter: blur(10px);
+        background-color: rgba(235, 235, 235, 0.2);
+    }
+
+    20% {
+        transform: translate(15px, 5px);
+        opacity: 1;
+        backdrop-filter: blur(10px);
+    }
+    
+
+    40% {
+        transform: translate(-15px, -5px);
+        opacity: 1;
+        backdrop-filter: blur(10px);
+        background-color: rgba(235, 235, 235, 0.2);
+    }
+    
+
+    60% {
+        transform: translate(5px, 15px);
+        opacity: 1;
+        backdrop-filter: blur(10px);
+        background-color: rgba(235, 235, 235, 0.2);
+    }
+
+    80% {
+        transform: translate(-5px, -15px);
+        opacity: 1;
+        backdrop-filter: blur(10px);
+        background-color: rgba(235, 235, 235, 0.2);      
+    }
+    
+
+    100% {
+        transform: translate(0px, 0px);
+        opacity: 0;
+        backdrop-filter: blur(0px);
+        background-color: rgba(235, 235, 235, 0);
+    }
+    
+}
+
+
+.lust-subaru-cappela-video {
+    position: absolute;
+    min-width: 400px;
+    min-height: 400px;
+    top: 585px;
+}
+
+.lust-subaru-cappela-video video {
+    position: absolute;
+    max-width: 380px;
+    left: 5px ;
+    top: 5px;
+}
+
+.border-box-lust-4 {
+    width: 400px;
+    height: 400px;
+    left: calc(50vw - (960px - 1920px + 490px ));
+    z-index: 0;
+    top: 20px;
+}
+
+
+.lust-subaru-zesty {
+    position: absolute;
+    min-width: 400px;
+    min-height: 400px;
+    top: 885px;
+    left: calc(50vw - (960px + 1920px - 500px ));
+}
+
+.lust-subaru-zesty img {
+    position: absolute;
+    max-width: 290px;
+    left: 10px ;
+    top: 12px;
+}
+
+.border-box-lust-5 {
+    width: 320px;
+    height: 455px;
+    left: calc(50vw - (960px - 1920px + 490px ));
+    z-index: 0;
+    top: 20px;
+}
+
+
+
+
+.lust-subaru-down-bad {
+    position: absolute;
+    min-width: 400px;
+    min-height: 400px;
+    top: 1085px;
+    left: calc(50vw - (960px + 1920px - 875px ));
+}
+
+.lust-subaru-down-bad img {
+    position: absolute;
+    max-width: 300px;
+    left: 5px ;
+    top: 5px;
+}
+
+.border-box-lust-6 {
+    width: 320px;
+    height: 320px;
+    left: calc(50vw - (960px - 1920px + 490px ));
+    z-index: 0;
+    top: 20px;
+}
+
+
+
+/*ICE*/
+
+.ice-images-container { 
+   pointer-events: none; 
+   display: flex; 
+   justify-content: space-between; 
+   position: absolute;
+   min-height: 100vh;
+   z-index: 99; 
+}
+
+
+/* ICE-SHARDS*/
+
+
+.ice-images {
+    position: sticky; 
+    display: block;
+    top: 0;
+    width: 100vw;
+    height:max-content
+}
+
+
+.ice-images img{
+    min-width: 16px; 
+    max-width: 64px; /*SHARD-SIZE*/
+    animation: ice-shards-floating 2s ease-in-out infinite;
+    position: relative;
+    display: inline-flex;
+}
+
+/*ICE-SHARDS-MARGINS*/
+
+/*DEFULT = 0*/
+
+#ice-shard1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#ice-shard2 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#ice-shard3 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#ice-shard4 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#ice-shard5 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#ice-shard6 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#ice-shard7 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#ice-shard8 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/*ICE_FUCKERYYYYY*/
+
+/*max is 1850 px*/ /*I DONT KNOW WHAT THE FUCK IS GOING ON*/
+
+.ice-images img:nth-child(1) {left: calc(50vw - (960px -  80px)); top:10vh;} 
+.ice-images img:nth-child(2) {left: calc(50vw - (960px -  1650px)); top:20vh;}
+.ice-images img:nth-child(3) {left: calc(50vw - (960px -  60px)); top:30vh;}
+.ice-images img:nth-child(4) {left: calc(50vw - (960px -  1600px)); top:40vh;}
+.ice-images img:nth-child(5) {left: calc(50vw - (960px -  -200px)); top:50vh;}
+.ice-images img:nth-child(6) {left: calc(50vw - (960px -  1400px)); top:60vh;}
+.ice-images img:nth-child(7) {left: calc(50vw - (960px -  25px)); top:90vh;}
+.ice-images img:nth-child(8) {left: calc(50vw - (960px -  1200px)); top:80vh;}
+.ice-images img:nth-child(9) {left: calc(50vw - (960px -  1250px)); top:110vh;} 
+.ice-images img:nth-child(10) {right: calc(50vw - (960px -  600px)); top:120vh;}
+.ice-images img:nth-child(11) {left: calc(50vw - (960px -  1150px)); top:130vh;}
+.ice-images img:nth-child(12) {right: calc(50vw - (960px -  700px)); top:190vh;}
+.ice-images img:nth-child(13) {left: calc(50vw - (960px -  1000px)); top:180vh;}
+.ice-images img:nth-child(14) {right: calc(50vw - (960px -  600px)); top:160vh;}
+.ice-images img:nth-child(15) {left: calc(50vw - (960px -  700px)); top:160vh;}
+.ice-images img:nth-child(16) {right: calc(50vw - (960px -  900px)); top:150vh;}
+
+
+
+/*if shit doesnt work correctly just spam reload a few times and that works for some reason*/
+
+
+/*ANIMATIONS*/
+
+
+/*ROUND-ANIMATION*/
+
+@keyframes image-bounce {
+
+    0% {transform: translateY(0); }
+    50% {transform: translateY(50px); }
+    100% {transform: translateY(0px); }
+
+}
+
+
+@keyframes round-border {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    
+    }
+
+}
+
+
+/*ICE-ANIMATION*/
+
+@keyframes ice-shards-floating {
+
+    0% {transform : translateY(0px); }
+    50% {transform: translateY(50px); }
+    100% {transform: translateY(0px); }
+    
+}
+
+
+/*TEA-ANIMATION*/
+
+@keyframes tea-drinking {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    transform: translateY(100px) scale(.22);
+  }
+}
+
+
+
+
+/*FOOTER-IMAGE*/
+
+.footer-image {
+    position: absolute;
+    min-width: 100vw;
+    max-width: 100vw;
+    display: inline;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.if-routes img {
+    min-width: 100vw;
+    max-width: 100vw;
+    top: 0px;
+    left: 0px;
+}
+
+.footer1 img {
+    min-width: 100vw;
+    max-width: 100vw;
+    top: 100vh;
+    left: 0px;
+}
+
+
+/*TESTING GROUNDS PLEASE DELETE AFTER USAGE*/

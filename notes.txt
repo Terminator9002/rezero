@@ -1,0 +1,12 @@
+the formula for how much you wanna move to the left in 100% size or centred in case screen size is changed is :
+
+left: calc(50vw - (Ypx -  Xpx));
+
+where X is the amount of pixels u want to move to the left and Y is 1/2 of your 100% screen size (defult = 960px)
+
+left: calc(50vw - (960px -  px));
+
+
+cool fire gradient :
+
+background: -webkit-linear-gradient(#b81050,#dc4a00, #db4f4f);
